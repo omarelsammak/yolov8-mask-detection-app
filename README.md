@@ -61,6 +61,6 @@ YOLOv8 was trained on the [Face Mask Detection Dataset](https://www.kaggle.com/d
 
 Classes:
 
-mask 😷
-no_mask 🚫
-incorrect_mask 😑
+mask 😷 <br>
+no_mask 🚫 <br>
+incorrect_mask 😑 <br>
