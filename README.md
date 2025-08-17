@@ -21,6 +21,7 @@ yolov8-mask-detection-app/
 Clone this repository:
 
 git clone 'project_link'
+
 cd yolov8-mask-detection-app
 
 Create a virtual environment (recommended):
