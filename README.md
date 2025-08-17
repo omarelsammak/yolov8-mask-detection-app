@@ -6,15 +6,15 @@ This project allows you to run inference on images and videos,
 visualize detection results, and experiment with deploying YOLOv8 in a user-friendly interface.
 
 ----------------------------------------------------------------------------------------------------------------------------------
-📂 Project Structure
-yolov8-mask-detection-app/
-│── app/
-│   ├── main.py               # Streamlit app entry point
-│── model/
-│   ├── best.pt               # Trained YOLOv8 model weights
-│── inference_utils.py        # Utility functions for inference
-│── requirements.txt          # Dependencies
-│── README.md                 # Project documentation
+📂 Project Structure <br>
+yolov8-mask-detection-app/ <br>
+│── app/ <br>
+│   ├── main.py               # Streamlit app entry point <br>
+│── model/ <br>
+│   ├── best.pt               # Trained YOLOv8 model weights <br>
+│── inference_utils.py        # Utility functions for inference <br>
+│── requirements.txt          # Dependencies <br>
+│── README.md                 # Project documentation <br>
 
 ----------------------------------------------------------------------------------------------------------------------------------
 ⚙️ Installation
