@@ -17,16 +17,28 @@ model = get_model()
 
 # Streamlit App
 st.set_page_config(page_title="YOLOv8 Mask Detection", layout="centered")
-st.title("🧠 Real-time Mask Detection with YOLOv8")
+st.title("😷 YOLOv8 Mask Detection App")
 
-# Sidebar options
+st.markdown(
+    """
+    Welcome to the **YOLOv8 Real-time Mask Detection App** 🎯  
+
+    - ✅ **Upload Mode** works everywhere (including Docker).  
+    - ⚠️ **Webcam Mode** may **not work inside Docker containers** (due to limited hardware access).  
+    """
+)
+
+# Sidebar
 st.sidebar.header("🔧 Settings")
-use_webcam = st.sidebar.checkbox("Use Webcam", value=True)
+use_webcam = st.sidebar.checkbox("Use Webcam (⚠️ may not work in Docker)", value=True)
 
 # Webcam OR Image Upload
 if use_webcam:
-    start_button = st.button("Start Webcam")
-    stop_button = st.button("Stop Webcam")
+    st.subheader("📸 Webcam Mode")
+    st.info("If running inside a Docker container, webcam access may not work. Please use Upload Mode instead.")
+
+    start_button = st.button("▶️ Start Webcam")
+    stop_button = st.button("⏹ Stop Webcam")
     FRAME_WINDOW = st.image([])
     fps_display = st.empty()
 
@@ -41,16 +53,12 @@ if use_webcam:
             st.warning("❌ Failed to capture frame.")
             break
 
-        # results = predict_image(model, frame)
         results = predict_image(model, frame)
 
         if len(results) > 0:
             annotated_frame = results[0].plot()
-            frame_rgb = cv2.cvtColor(annotated_frame, cv2.COLOR_BGR2RGB)
-            FRAME_WINDOW.image(frame_rgb)
         else:
-            frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-            FRAME_WINDOW.image(frame)  # Just show raw frame if nothing to display
+            annotated_frame = frame
 
         frame_rgb = cv2.cvtColor(annotated_frame, cv2.COLOR_BGR2RGB)
         FRAME_WINDOW.image(frame_rgb, channels="RGB")
@@ -63,7 +71,8 @@ if use_webcam:
         st.success("✅ Webcam stopped.")
 
 else:
-    uploaded_file = st.file_uploader("📤 Upload an image", type=["jpg", "jpeg", "png"])
+    st.subheader("📤 Upload Mode")
+    uploaded_file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
     if uploaded_file:
         file_bytes = uploaded_file.read()
         img_array = np.frombuffer(file_bytes, np.uint8)
@@ -72,9 +81,8 @@ else:
         results = predict_image(model, img)
         if len(results) > 0:
             annotated_img = results[0].plot()
-            img_rgb = cv2.cvtColor(annotated_img, cv2.COLOR_BGR2RGB)
-            
         else:
-            img_rgb= cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-        
+            annotated_img = img
+
+        img_rgb = cv2.cvtColor(annotated_img, cv2.COLOR_BGR2RGB)
         st.image(img_rgb, caption="Detection Result", use_column_width=True)
