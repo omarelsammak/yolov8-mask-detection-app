@@ -60,10 +60,10 @@ Note:
 You can also run this app using Docker.
 The Docker image is hosted on GitHub Container Registry (GHCR).
 
-1. Pull the image
+1. Pull the image <br>
 docker pull ghcr.io/<your-github-username>/yolov8-mask-detection-app:latest
 
-2. Run in upload mode (default, works everywhere)
+2. Run in upload mode (default, works everywhere) <br>
 docker run -it -p 8501:8501 ghcr.io/<your-github-username>/yolov8-mask-detection-app:latest
 
 
