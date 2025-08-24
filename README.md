@@ -45,7 +45,40 @@ streamlit run app/main.py
 Then open your browser at:
 👉 http://localhost:8501
 
+Note:
+    The app always shows two modes:
+        1. Webcam Mode (works when running locally, not inside Docker on Windows/macOS).
+
+        2. File Upload Mode (works everywhere)
+
+
+
 ----------------------------------------------------------------------------------------------------------------------------------
+
+🐳 Running with Docker
+
+You can also run this app using Docker.
+The Docker image is hosted on GitHub Container Registry (GHCR).
+
+1. Pull the image
+docker pull ghcr.io/<your-github-username>/yolov8-mask-detection-app:latest
+
+2. Run in upload mode (default, works everywhere)
+docker run -it -p 8501:8501 ghcr.io/<your-github-username>/yolov8-mask-detection-app:latest
+
+
+Now open 👉 http://localhost:8501
+
+⚠️ Inside Docker, only file upload mode is supported. Webcam mode will not work in containers unless explicitly enabled.
+
+📌 Important Notes:
+
+When running inside Docker, the app will only support file upload mode (images/videos).
+
+Webcam access is not available by default inside containers on Windows/macOS.
+
+----------------------------------------------------------------------------------------------------------------------------------
+
 🎯 App Features
 Upload images or videos for mask detection
 
@@ -54,6 +87,12 @@ Real-time inference powered by YOLOv8
 Visualization of detection results (bounding boxes, labels, confidence)
 
 Easy-to-use Streamlit interface
+
+Two modes:
+
+File upload mode (works in Docker & locally)
+
+Webcam mode (works locally)
 
 ----------------------------------------------------------------------------------------------------------------------------------
 🧠 Model
