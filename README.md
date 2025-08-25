@@ -30,22 +30,23 @@ cd yolov8-mask-detection-app
 
 
 ----------------------------------------------------------------------------------------------------------------------------------
-🚀 Running the App
-Run the Streamlit app with:
+🚀 Running the App <br>
+Run the Streamlit app with: <br>
 
 Create a virtual environment (recommended):
 
-python -m venv venv <br>
-source venv/bin/activate   # Linux/Mac <br>
-venv\Scripts\activate      # Windows <br>
+    python -m venv venv <br>
+    source venv/bin/activate   # Linux/Mac <br>
+    venv\Scripts\activate      # Windows <br>
 
 
 Install dependencies:
 
-pip install -r requirements.txt
+    pip install -r requirements.txt
 
+Run the app:
 
-streamlit run app/main.py
+    streamlit run app/main.py
 
 
 Then open your browser at:
@@ -73,14 +74,9 @@ You can also run this app using Docker.
     docker run -it -p 8501:8501 ghcr.io/omarelsammak/yolov8-mask-detection-app:main
 
 ## Second option: Build the image yourself
-   docker build -t yolov8-mask-app .
-   docker run -it -p 8501:8501 yolov8-mask-app
+    docker build -t yolov8-mask-app .
+    docker run -it -p 8501:8501 yolov8-mask-app
 
-This project is automatically built and published to the **GitHub Container Registry (GHCR)**.
-
-### 1️⃣ Pull the latest image
-```bash
-docker pull ghcr.io/omarelsammak/yolov8-mask-detection-app:latest
 
 
 Now open 👉 http://localhost:8501
