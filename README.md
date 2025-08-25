@@ -35,9 +35,9 @@ Run the Streamlit app with:
 
 Create a virtual environment (recommended):
 
-python -m venv venv
-source venv/bin/activate   # Linux/Mac
-venv\Scripts\activate      # Windows
+python -m venv venv <br>
+source venv/bin/activate   # Linux/Mac <br>
+venv\Scripts\activate      # Windows <br>
 
 
 Install dependencies:
