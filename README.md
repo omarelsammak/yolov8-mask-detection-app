@@ -12,9 +12,9 @@ yolov8-mask-detection-app/ <br>
 │   ├── main.py               # Streamlit app entry point <br>
 │── model/ <br>
 │   ├── best.pt               # Trained YOLOv8 model weights <br>
-│── inference_utils.py        # Utility functions for inference <br>
+│── inference.py        # Inference script <br>
 │── requirements.txt          # Dependencies <br>
-│── mask-detection-using-yolov8.ipynb # Jupyter Notebook for training/experiments <br>
+│── mask-detection-using-yolov8.ipynb # Jupyter Notebook for training <br>
 │── .dockerignore # Docker ignore file <br>
 │── .gitignore # Git ignore file <br>
 │── Dockerfile # Docker image definition <br>
