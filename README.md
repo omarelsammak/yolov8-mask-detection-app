@@ -24,6 +24,11 @@ git clone 'project_link'
 
 cd yolov8-mask-detection-app
 
+
+----------------------------------------------------------------------------------------------------------------------------------
+🚀 Running the App
+Run the Streamlit app with:
+
 Create a virtual environment (recommended):
 
 python -m venv venv
@@ -35,9 +40,6 @@ Install dependencies:
 
 pip install -r requirements.txt
 
-----------------------------------------------------------------------------------------------------------------------------------
-🚀 Running the App
-Run the Streamlit app with:
 
 streamlit run app/main.py
 
@@ -58,41 +60,30 @@ Note:
 🐳 Running with Docker
 
 You can also run this app using Docker.
-The Docker image is hosted on GitHub Container Registry (GHCR).
 
-1. Pull the image <br>
-docker pull ghcr.io/<your-github-username>/yolov8-mask-detection-app:latest
 
+1. Build the image
+   docker build -t yolov8-mask-app .
 2. Run in upload mode (default, works everywhere) <br>
-docker run -it -p 8501:8501 ghcr.io/<your-github-username>/yolov8-mask-detection-app:latest
-
+    docker run -it -p 8501:8501 yolov8-mask-app
 
 Now open 👉 http://localhost:8501
 
 ⚠️ Inside Docker, only file upload mode is supported. Webcam mode will not work in containers unless explicitly enabled.
 
 📌 Important Notes:
-
-When running inside Docker, the app will only support file upload mode (images/videos).
-
 Webcam access is not available by default inside containers on Windows/macOS.
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
 🎯 App Features
 Upload images or videos for mask detection
-
 Real-time inference powered by YOLOv8
-
 Visualization of detection results (bounding boxes, labels, confidence)
-
 Easy-to-use Streamlit interface
-
 Two modes:
-
-File upload mode (works in Docker & locally)
-
-Webcam mode (works locally)
+ 1. File upload mode (works in Docker & locally)
+ 2. Webcam mode (works locally)
 
 ----------------------------------------------------------------------------------------------------------------------------------
 🧠 Model
