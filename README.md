@@ -49,8 +49,8 @@ Then open your browser at:
 
 Note:
     The app always shows two modes:
+    
         1. Webcam Mode (works when running locally, not inside Docker on Windows/macOS).
-
         2. File Upload Mode (works everywhere)
 
 
