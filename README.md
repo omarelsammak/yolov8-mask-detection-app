@@ -67,10 +67,10 @@ You can also run this app using Docker.
 
 ## 1. Using the Pre-Built Docker Image
 ###     Pull the latest image
-    docker pull ghcr.io/omarelsammak/yolov8-mask-detection-app:latest
+    docker pull ghcr.io/omarelsammak/yolov8-mask-detection-app:main
 
 ###     Run the latest image
-    docker run -it -p 8501:8501 ghcr.io/omarelsammak/yolov8-mask-detection-app:latest
+    docker run -it -p 8501:8501 ghcr.io/omarelsammak/yolov8-mask-detection-app:main
 
 ## 2. Build the image
    docker build -t yolov8-mask-app .
