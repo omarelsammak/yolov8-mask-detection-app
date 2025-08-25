@@ -14,6 +14,10 @@ yolov8-mask-detection-app/ <br>
 │   ├── best.pt               # Trained YOLOv8 model weights <br>
 │── inference_utils.py        # Utility functions for inference <br>
 │── requirements.txt          # Dependencies <br>
+│── mask-detection-using-yolov8.ipynb # Jupyter Notebook for training/experiments <br>
+│── .dockerignore # Docker ignore file <br>
+│── .gitignore # Git ignore file <br>
+│── Dockerfile # Docker image definition <br>
 │── README.md                 # Project documentation <br>
 
 ----------------------------------------------------------------------------------------------------------------------------------
