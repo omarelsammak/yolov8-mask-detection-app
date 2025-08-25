@@ -24,7 +24,7 @@ yolov8-mask-detection-app/ <br>
 ⚙️ Installation
 Clone this repository:
 
-git clone 'project_link'
+git clone https://github.com/omarelsammak/yolov8-mask-detection-app.git
 
 cd yolov8-mask-detection-app
 
